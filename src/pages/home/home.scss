@@ -1,3 +1,33 @@
-page-home {
-
+.ios, .md {
+    page-home {                    
+        ion-slides {
+            ion-slide {
+                background-image: url('../../assets/imgs/mrQuickIndex.png');
+                background-size: cover;
+                background-position: center;
+                .ion-slide_img {
+                    width: 400px;
+                }
+                .ion-slide-caption {                    
+                    .text {
+                        display: inline-block;
+                        font-family: $font-gotham-bold-md-regular;
+                        @include font-size($f-size-lg);
+                        color: color($colors, primary);
+                        line-height: 1.2;
+                        text-align: left;                        
+                    }
+                } 
+                .button-primary-index {                                     
+                    @extend .button-primary;
+                    text-transform: uppercase;                                           
+                }                       
+            }   
+            .swiper-pagination-bullet {
+                background: color($colors, primary);
+            }           
+        } 
+    }
+    
+    
 }
