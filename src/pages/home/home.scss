@@ -17,11 +17,7 @@
                         line-height: 1.2;
                         text-align: left;                        
                     }
-                } 
-                .button-primary-index {                                     
-                    @extend .button-primary;
-                    text-transform: uppercase;                                           
-                }                       
+                }                                     
             }   
             .swiper-pagination-bullet {
                 background: color($colors, primary);

@@ -105,7 +105,16 @@ body {
     @include font-size(24pt);
     background-color: color($colors, primary);
     font-family: $font-gotham-bold-md-regular;
-    border-radius: 5px;    
+    border-radius: 5px;  
+    text-transform: uppercase;  
+}
+.button-secondary {
+    @include font-size(24pt);
+    background-color: color($colors, secondary);
+    font-family: $font-gotham-medium-md-regular;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .gotham_boldregular {        

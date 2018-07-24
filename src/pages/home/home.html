@@ -6,15 +6,89 @@
 			</button>
 		</ion-buttons>
 		<ion-buttons>
-			<button ion-button icon-only>
-				<ion-icon name="information-circle" ></ion-icon>
+			<button ion-button icon-only (click)="toggleLogout = !toggleLogout">
+				<ion-icon name="information-circle"></ion-icon>
 			</button>
-		</ion-buttons>		
+		</ion-buttons>
 	</ion-navbar>
 </ion-header>
 
 <ion-content no-padding fullscreen>
 	<ion-slides pager>
+		<ion-slide>
+			<a href="#">
+				<img src="assets/imgs/mrQuickLogo.png" alt="Logo MrQuick" class="ion-slide_img">
+			</a>
+			<div class="ion-slide-caption">
+				<p class="text">
+					Agrega tu orden y pasa
+					<br>por tu pedido o recíbelo
+					<br> en tus manos.
+				</p>
+			</div>
+
+			<button ion-button class="button-secondary" icon-start margin-bottom>
+				<ion-icon name="restaurant"></ion-icon>
+				Mis órdenes
+			</button>
+
+			<ion-buttons *ngIf="toggleLogout">
+				<button ion-button class="button-primary">
+					Acerca de
+				</button>
+				<button ion-button class="button-primary">
+					Ayuda
+				</button>
+			</ion-buttons>
+			<ion-buttons *ngIf="!toggleLogout">
+				<button ion-button class="button-primary">
+					Ingresar dirección
+				</button>
+				<button ion-button class="button-primary" [navPush]="listPlacepage">
+					¿Qué hay cerca?
+				</button>
+			</ion-buttons>
+			<button ion-button class="button-secondary" *ngIf="toggleLogout">
+				Cerrar sesión
+			</button>
+		</ion-slide>
+
+		<ion-slide>
+			<a href="#">
+				<img src="assets/imgs/mrQuickLogo.png" alt="Logo MrQuick" class="ion-slide_img">
+			</a>
+			<div class="ion-slide-caption">
+				<p class="text">
+					Hemos creado una
+					<br>solución pensada en tus
+					<br> necesidaddes
+				</p>
+			</div>
+			<button ion-button class="button-secondary" icon-start margin-bottom>
+				<ion-icon name="restaurant"></ion-icon>
+				Mis órdenes
+			</button>
+
+			<ion-buttons *ngIf="toggleLogout">
+				<button ion-button class="button-primary">
+					Acerca de
+				</button>
+				<button ion-button class="button-primary">
+					Ayuda
+				</button>
+			</ion-buttons>
+			<ion-buttons *ngIf="!toggleLogout">
+				<button ion-button class="button-primary">
+					Ingresar dirección
+				</button>
+				<button ion-button class="button-primary" [navPush]="listPlacepage">
+					¿Qué hay cerca?
+				</button>
+			</ion-buttons>
+			<button ion-button class="button-secondary" *ngIf="toggleLogout">
+				Cerrar sesión
+			</button>
+		</ion-slide>
 
 		<ion-slide>
 			<a href="#">
@@ -28,22 +102,30 @@
 					<br>tu plato favorito
 				</p>
 			</div>
-			<ion-buttons>
-				<button ion-button class="button-primary-index">	
-					INGRESAR DIRECCIÓN		
+			<button ion-button class="button-secondary" icon-start margin-bottom>
+				<ion-icon name="restaurant"></ion-icon>
+				Mis órdenes
+			</button>
+
+			<ion-buttons *ngIf="toggleLogout">
+				<button ion-button class="button-primary">
+					Acerca de
 				</button>
-				<button ion-button class="button-primary-index" [navPush]="listPlacepage">	
-					¿Qué hay cerca?		
+				<button ion-button class="button-primary">
+					Ayuda
 				</button>
 			</ion-buttons>
-		</ion-slide>
-
-		<ion-slide>
-			<h2>Slide 2</h2>
-		</ion-slide>
-
-		<ion-slide>
-			<h2>Slide 3</h2>
+			<ion-buttons *ngIf="!toggleLogout">
+				<button ion-button class="button-primary">
+					Ingresar dirección
+				</button>
+				<button ion-button class="button-primary" [navPush]="listPlacepage">
+					¿Qué hay cerca?
+				</button>
+			</ion-buttons>
+			<button ion-button class="button-secondary" *ngIf="toggleLogout">
+				Cerrar sesión
+			</button>
 		</ion-slide>
 
 	</ion-slides>

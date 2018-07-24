@@ -1,4 +1,11 @@
 page-list-places {
+    .searchbar-input {
+        border: 0 !important;
+        box-shadow: none !important;
+        background-color: transparent!important;
+        color: color($colors, white) !important;
+        font-family: $font-light-md-italic;
+    }
     ion-content {
         background-image: url('../../assets/imgs/mrQuickPlaces.png');
         background-size: cover;
@@ -15,8 +22,10 @@ page-list-places {
                 color: color($colors, primary);
                 font-family: $font-light-md-italic;
             }
-            .category {                
-                text-decoration: underline;
+            .category {             
+                span {
+                    text-decoration: underline;
+                }                  
                 @include font-size($f-size);
                 font-family: $font-light-md-regular;
                 color: color($colors, light);
@@ -32,6 +41,9 @@ page-list-places {
                 @include font-size($f-size);
                 text-transform: uppercase;
                 font-family: $font-gotham-bold-md-regular;
+                &.text-secondary {
+                    color: color($colors, secondary);
+                }
             }
         }
     }

@@ -7,6 +7,7 @@ import { ListPlacesPage } from '../list-places/list-places';
 })
 export class HomePage {
   listPlacepage: any;
+  toggleLogout = false;
   constructor(public navCtrl: NavController) {
     this.listPlacepage = ListPlacesPage;
   }
